@@ -151,7 +151,6 @@ ol.ch .e { color: var(--mid); font-size: 12.5px; display: block; }
     <div class="sec-head">
       <h2>CCAR-F 課程列表</h2>
       <div class="sec-actions">
-        <a href="CCAR-F/ccar-f-course-zh.html">開啟獨立總覽頁 →</a>
         <a href="CCAR-F/ccar-f-mock-exam.html">模擬考網站 →</a>
       </div>
     </div>
@@ -163,7 +162,6 @@ ol.ch .e { color: var(--mid); font-size: 12.5px; display: block; }
     <div class="sec-head">
       <h2>CCAR-P 課程列表</h2>
       <div class="sec-actions">
-        <a href="CCAR-P/ccar-p-course-zh.html">開啟獨立總覽頁 →</a>
         <a href="CCAR-P/ccar-p-mock-exam.html">模擬考網站 →</a>
       </div>
     </div>
@@ -175,34 +173,44 @@ ol.ch .e { color: var(--mid); font-size: 12.5px; display: block; }
 <script>
 "use strict";
 
-const DATA_F = {
-  baseDir: "CCAR-F/",
-  courses: [
-    {"n":1,"name_zh":"AI 協作素養：框架與基礎","name_en":"AI Fluency: Framework & Foundations","tag_zh":"學會有效、有效率、合乎倫理且安全地跟 AI 協作（4D 框架：Delegation、Description、Discernment、Diligence）。","official":"14 個單元・影片 1.1 小時・1 個測驗","file":"ccar-f-course-zh-c1.html","chapters":[{"id":"c1-01","title_zh":"AI Fluency 導論","title_en":"Introduction to AI Fluency","n":1,"min":4},{"id":"c1-02","title_zh":"AI Fluency 框架","title_en":"The AI Fluency Framework","n":2,"min":8},{"id":"c1-03","title_zh":"深入探討 1：什麼是生成式 AI？","title_en":"Deep Dive 1: What is Generative AI?","n":2,"min":4},{"id":"c1-04","title_zh":"Delegation（委派）","title_en":"Delegation","n":2,"min":9},{"id":"c1-05","title_zh":"Description（描述）","title_en":"Description","n":1,"min":4},{"id":"c1-06","title_zh":"深入探討 2：有效的提示技巧","title_en":"Deep Dive 2: Effective prompting techniques","n":1,"min":4},{"id":"c1-07","title_zh":"Discernment（辨別）","title_en":"Discernment","n":1,"min":6},{"id":"c1-08","title_zh":"Description–Discernment 循環","title_en":"The Description-Discernment loop","n":1,"min":4},{"id":"c1-09","title_zh":"Diligence（盡責）","title_en":"Diligence","n":1,"min":6},{"id":"c1-10","title_zh":"結語與結業證書","title_en":"Conclusion & certificate","n":3,"min":13}]},
-    {"n":2,"name_zh":"用 Claude API 開發","name_en":"Building with the Claude API","tag_zh":"完整介紹怎麼用 Claude API 開發：API 基礎、提示評估、提示工程、tool use、RAG、Claude 的進階功能、MCP、Claude Code、agent 與 workflow。","official":"85 個單元・影片約 7 小時 15 分","file":"ccar-f-course-zh-c2.html","chapters":[{"id":"c2-01","title_zh":"課程介紹","title_en":"Introduction","n":1,"min":3},{"id":"c2-02","title_zh":"Anthropic 概覽","title_en":"Anthropic overview","n":1,"min":5},{"id":"c2-03","title_zh":"用 API 存取 Claude","title_en":"Accessing Claude with the API","n":13,"min":63},{"id":"c2-04","title_zh":"提示評估","title_en":"Prompt evaluation","n":8,"min":42},{"id":"c2-05","title_zh":"提示工程技巧","title_en":"Prompt engineering techniques","n":7,"min":36},{"id":"c2-06","title_zh":"Claude 的工具使用","title_en":"Tool use with Claude","n":13,"min":86},{"id":"c2-07","title_zh":"RAG 與 agentic 搜尋","title_en":"RAG and Agentic Search","n":7,"min":53},{"id":"c2-08","title_zh":"Claude 的進階功能","title_en":"Features of Claude","n":9,"min":53},{"id":"c2-09","title_zh":"Model Context Protocol（MCP）","title_en":"Model Context Protocol","n":12,"min":62},{"id":"c2-10","title_zh":"Anthropic 的應用：Claude Code 與 Computer Use","title_en":"Anthropic apps - Claude Code and computer use","n":4,"min":17},{"id":"c2-11","title_zh":"Agent 與 workflow","title_en":"Agents and workflows","n":8,"min":27},{"id":"c2-12","title_zh":"期末測驗","title_en":"Final assessment","n":1,"min":1},{"id":"c2-13","title_zh":"課程總結","title_en":"Wrapping up!","n":1,"min":4}]},
-    {"n":3,"name_zh":"在 Google Cloud 上使用 Claude","name_en":"Claude on Google Cloud","tag_zh":"同一套主題，改用 Google Cloud（Vertex AI）呼叫 Claude。中文版只完整翻第 2 門沒有的 10 個單元（Vertex AI 設定、控制輸出、batch tool、用工具產結構化資料、reranking、contextual retrieval、平行跑 Claude Code、自動除錯、computer use）；其他單元連到第 2 門的中文版。","official":"85 個單元・影片 8 小時・10 個測驗","file":"ccar-f-course-zh-c3.html","chapters":[{"id":"c3-01","title_zh":"課程介紹","title_en":"Introduction","n":1,"min":1,"nNew":0},{"id":"c3-02","title_zh":"Anthropic 概覽","title_en":"Anthropic overview","n":1,"min":1,"nNew":0},{"id":"c3-03","title_zh":"用 API 存取 Claude","title_en":"Accessing Claude with the API","n":14,"min":8,"nNew":2},{"id":"c3-04","title_zh":"提示評估","title_en":"Prompt evaluation","n":8,"min":1,"nNew":0},{"id":"c3-05","title_zh":"提示工程技巧","title_en":"Prompt engineering techniques","n":7,"min":1,"nNew":0},{"id":"c3-06","title_zh":"Claude 的工具使用","title_en":"Tool use with Claude","n":14,"min":16,"nNew":2},{"id":"c3-07","title_zh":"檢索增強生成（RAG）","title_en":"Retrieval Augmented Generation","n":10,"min":13,"nNew":2},{"id":"c3-08","title_zh":"Claude 的進階功能","title_en":"Features of Claude","n":8,"min":1,"nNew":0},{"id":"c3-09","title_zh":"Model Context Protocol（MCP）","title_en":"Model Context Protocol","n":12,"min":1,"nNew":0},{"id":"c3-10","title_zh":"Anthropic 的應用：Claude Code 與 Computer Use","title_en":"Anthropic apps - Claude Code and computer use","n":8,"min":26,"nNew":4},{"id":"c3-11","title_zh":"Agent 與 workflow","title_en":"Agents and workflows","n":8,"min":1,"nNew":0},{"id":"c3-12","title_zh":"期末測驗","title_en":"Final assessment","n":1,"min":1,"nNew":0},{"id":"c3-13","title_zh":"課程總結","title_en":"Wrapping up!","n":1,"min":1,"nNew":0}]},
-    {"n":4,"name_zh":"Claude Code 實戰","name_en":"Claude Code in Action","tag_zh":"讓 Claude Code 長時間、少人看管地工作也能放心：引導、設定、自動化、驗證。","official":"10 個單元（文字講義＋影片）","file":"ccar-f-course-zh-c4.html","chapters":[{"id":"c4-01","title_zh":"掌握工作方向","title_en":"Steer the Work","n":1,"min":6},{"id":"c4-02","title_zh":"設定 Claude","title_en":"Configure Claude","n":4,"min":22},{"id":"c4-03","title_zh":"把重複的工作自動化","title_en":"Automate Repeat Work","n":2,"min":14},{"id":"c4-04","title_zh":"驗證與分享","title_en":"Verify and Share","n":2,"min":10},{"id":"c4-05","title_zh":"測驗","title_en":"Quiz","n":1,"min":1}]},
-    {"n":5,"name_zh":"Claude 入門","name_en":"Claude 101","tag_zh":"日常工作怎麼用 Claude：核心功能（專案、artifacts、skills、連接工具、研究）與各職務的用法。","official":"19 個單元","file":"ccar-f-course-zh-c5.html","chapters":[{"id":"c5-01","title_zh":"認識 Claude","title_en":"Meet Claude","n":4,"min":37},{"id":"c5-02","title_zh":"整理你的工作與知識","title_en":"Organizing your work and knowledge","n":3,"min":30},{"id":"c5-03","title_zh":"擴展 Claude 的觸及範圍","title_en":"Expanding Claude's reach","n":3,"min":23},{"id":"c5-04","title_zh":"整合運用","title_en":"Putting it all together","n":2,"min":14},{"id":"c5-05","title_zh":"結語與結業證書","title_en":"Conclusion & certificate","n":2,"min":4}]},
-    {"n":6,"name_zh":"在 Amazon Bedrock 上使用 Claude","name_en":"Claude with Amazon Bedrock","tag_zh":"同一套主題，改用 Amazon Bedrock 呼叫 Claude（原本是給 AWS 員工的認證訓練）。中文版只完整翻第 2 門沒有的 12 個單元（控制輸出、batch tool use、用工具產結構化資料、彈性擷取、reranking、contextual retrieval、平行跑 Claude Code、自動除錯、computer use、agent 的特質）；其他單元連到第 2 門的中文版。","official":"85 個單元・影片 8 小時・10 個測驗","file":"ccar-f-course-zh-c6.html","chapters":[{"id":"c6-01","title_zh":"課程介紹","title_en":"Course introduction","n":2,"min":1,"nNew":1},{"id":"c6-02","title_zh":"使用 API","title_en":"Working with the API","n":12,"min":7,"nNew":1},{"id":"c6-03","title_zh":"提示評估","title_en":"Prompt evaluations","n":8,"min":1,"nNew":0},{"id":"c6-04","title_zh":"提示工程","title_en":"Prompt engineering","n":7,"min":1,"nNew":0},{"id":"c6-05","title_zh":"工具使用","title_en":"Tool use","n":13,"min":21,"nNew":3},{"id":"c6-06","title_zh":"檢索增強生成（RAG）","title_en":"Retrieval Augmented Generation","n":10,"min":13,"nNew":2},{"id":"c6-07","title_zh":"Claude 的進階功能","title_en":"Features of Claude","n":8,"min":1,"nNew":0},{"id":"c6-08","title_zh":"Model Context Protocol（MCP）","title_en":"Model Context Protocol","n":12,"min":1,"nNew":0},{"id":"c6-09","title_zh":"Agent","title_en":"Agents","n":9,"min":23,"nNew":5},{"id":"c6-10","title_zh":"期末測驗","title_en":"Final assessment","n":1,"min":1,"nNew":0},{"id":"c6-11","title_zh":"課程總結","title_en":"Wrap up","n":1,"min":1,"nNew":0}]},
-    {"n":7,"name_zh":"Model Context Protocol（MCP）入門","name_en":"Introduction to Model Context Protocol","tag_zh":"用 Python 從頭寫 MCP server 與 client，學會 MCP 的三種基本元件：tools、resources、prompts。","official":"14 個單元・影片約 1 小時","file":"ccar-f-course-zh-c7.html","chapters":[{"id":"c7-01","title_zh":"課程導論","title_en":"Introduction","n":3,"min":11},{"id":"c7-02","title_zh":"動手做 MCP 伺服器","title_en":"Hands-on with MCP servers","n":4,"min":15},{"id":"c7-03","title_zh":"用 MCP 用戶端連線","title_en":"Connecting with MCP clients","n":5,"min":33},{"id":"c7-04","title_zh":"測驗與總結","title_en":"Assessment and wrap Up","n":2,"min":4}]}
-  ]
-};
+// 資料改從 Supabase 讀（四張表皆開 RLS、只允許讀取）
+const SUPABASE_URL = "https://hxqycjlnhnocdarammsd.supabase.co";
+const SUPABASE_KEY = "sb_publishable_LmP7L3b9fMo6YTGzxQ0c8w_FGnse5Pt";
 
-const DATA_P = {
-  baseDir: "CCAR-P/",
-  courses: [
-    {"n":1,"name_zh":"Claude 平台與解決方案設計","name_en":"Claude Platform & Solution Design","min":238,"file":"ccar-p-course-zh-c1.html","chapters":[{"id":"c1-01","title_zh":"本門課簡介","title_en":"Module Introduction","min":9,"screens":1},{"id":"c1-02","title_zh":"Claude 的行為特性","title_en":"How Claude Behaves","min":10,"screens":1},{"id":"c1-03","title_zh":"平台地圖與基本元件","title_en":"Platform Map & Primitives","min":16,"screens":4},{"id":"c1-04","title_zh":"拆解需求","title_en":"Decomposition","min":17,"screens":4},{"id":"c1-05","title_zh":"選擇架構模式","title_en":"Pattern Selection","min":33,"screens":5},{"id":"c1-06","title_zh":"參考架構","title_en":"Reference Architectures","min":16,"screens":3},{"id":"c1-07","title_zh":"RAG 管線設計","title_en":"RAG Pipeline Design","min":9,"screens":2},{"id":"c1-08","title_zh":"模型與上下文策略","title_en":"Model & Context Strategy","min":29,"screens":3},{"id":"c1-09","title_zh":"把提示當成架構來設計","title_en":"Prompting as Architecture","min":19,"screens":4},{"id":"c1-10","title_zh":"入口與治理","title_en":"Entry Points & Governance","min":50,"screens":3},{"id":"c1-11","title_zh":"整合練習與重點回顧","title_en":"Assembly & Recap","min":28,"screens":3},{"id":"c1-12","title_zh":"本門課完成","title_en":"Module Complete","min":3,"screens":1}]},
-    {"n":2,"name_zh":"企業整合與正式上線","name_en":"Enterprise Integration & Production","min":158,"file":"ccar-p-course-zh-c2.html","chapters":[{"id":"c2-01","title_zh":"本門課簡介","title_en":"Module Introduction","min":5,"screens":1},{"id":"c2-02","title_zh":"Eval（評估）","title_en":"Evals","min":23,"screens":3},{"id":"c2-03","title_zh":"從 POC 到正式上線","title_en":"POC to Prod","min":19,"screens":3},{"id":"c2-04","title_zh":"規模估算與可行性","title_en":"Sizing","min":29,"screens":3},{"id":"c2-05","title_zh":"企業整合","title_en":"Integration","min":30,"screens":3},{"id":"c2-06","title_zh":"A/B 測試與可觀測性","title_en":"A/B & Obs","min":22,"screens":3},{"id":"c2-07","title_zh":"練習：評估框架","title_en":"Exercise: Eval Framework","min":4,"screens":1},{"id":"c2-08","title_zh":"總結：整合練習、名詞表與重點回顧","title_en":"Wrap-up","min":26,"screens":4}]},
-    {"n":3,"name_zh":"負責任的 AI、安全與風險（架構師篇）","name_en":"Responsible AI, Safety & Risk for Architects","min":114,"file":"ccar-p-course-zh-c3.html","chapters":[{"id":"c3-01","title_zh":"本門課簡介","title_en":"Module Introduction","min":10,"screens":1},{"id":"c3-02","title_zh":"對齊（Alignment）","title_en":"Alignment","min":12,"screens":3},{"id":"c3-03","title_zh":"護欄（Guardrails）","title_en":"Guardrails","min":29,"screens":5},{"id":"c3-04","title_zh":"公平性","title_en":"Fairness","min":14,"screens":3},{"id":"c3-05","title_zh":"審查分流","title_en":"Review routing","min":17,"screens":3},{"id":"c3-06","title_zh":"法規遵循","title_en":"Compliance","min":12,"screens":3},{"id":"c3-07","title_zh":"總結","title_en":"Wrap-up","min":20,"screens":4}]},
-    {"n":4,"name_zh":"利害關係人溝通、生命週期與市場推廣","name_en":"Stakeholder Engagement, Lifecycle & GTM","min":178,"file":"ccar-p-course-zh-c4.html","chapters":[{"id":"c4-01","title_zh":"本門課簡介","title_en":"Module Introduction","min":17,"screens":1},{"id":"c4-02","title_zh":"需求探索","title_en":"Discovery","min":25,"screens":3},{"id":"c4-03","title_zh":"取捨","title_en":"Tradeoffs","min":37,"screens":3},{"id":"c4-04","title_zh":"回饋迴圈","title_en":"Feedback Loops","min":23,"screens":3},{"id":"c4-05","title_zh":"文件","title_en":"Documentation","min":17,"screens":3},{"id":"c4-06","title_zh":"入口選擇","title_en":"Entry Point","min":28,"screens":3},{"id":"c4-07","title_zh":"總結","title_en":"Wrap-up","min":32,"screens":4}]},
-    {"n":5,"name_zh":"團隊賦能與維運生產力","name_en":"Team Enablement & Operational Productivity","min":45,"file":"ccar-p-course-zh-c5.html","chapters":[{"id":"c5-01","title_zh":"本門課簡介","title_en":"Module Introduction","min":4,"screens":1},{"id":"c5-02","title_zh":"團隊環境設定","title_en":"Team Setup","min":13,"screens":2},{"id":"c5-03","title_zh":"開發流程","title_en":"Dev Workflows","min":9,"screens":2},{"id":"c5-04","title_zh":"維運支援","title_en":"Ops Support","min":6,"screens":1},{"id":"c5-05","title_zh":"總結","title_en":"Wrap-up","min":13,"screens":3},{"id":"c5-06","title_zh":"本門課完成","title_en":"Module Complete","min":3,"screens":1}]}
-  ],
-  planQa: [
-    {"q":"先讀英文還是先讀中文？官方課程要翻中文看嗎？","a":"**答：觀念用中文讀懂，英文只練兩樣：關鍵術語、題目。**\n- 考試考的是「判斷」，不是英文閱讀；而且正式考試只有題目，沒有課文。用英文硬啃 12 小時的課程，時間會變 1.5～2 倍，換到的英文能力卻用不到考試上。\n- 官方課程 → 讀精譯版（不要用瀏覽器機翻），但每章標成「英文＋點開看中文」的關鍵術語，要記住它的英文長相（考試選項、問句最後一句常直接用這些字）。\n- 英文閱讀 → 練在題目上：學習模式（中英對照）→ 練習模式（英文直讀）。題目英文的句型很固定（Which … MOST appropriate／What should the architect do FIRST），練得起來。\n- 不建議「中文全部看一遍、再英文全部看一遍」：第二遍的時間拿去做題，效果比較好。"},
-    {"q":"第一天上第 1 門第 1/9 段，為什麼做 D1、D2 的題？9 段只上 1 段就做題，是不是超綱？","a":"**答：是，會超綱。這是計畫設計的錯，正在改。**\n- 第 1 門課的內容本來就跨兩個 Domain：官方課程頁的 6 個學習目標裡，前 3 個是 D1（把需求拆成 Claude／既有系統／人做、augmented call／workflow／agent、參考架構），第 4 個是 D2（選模型、context 策略、換模型前先用 eval 把關），第 5、6 個是平台入口與交付路線。所以「第 1 門＝D1＋D2」沒有錯。\n- 錯在「9 段」：那是用分鐘數硬切的（238 分 × 1.5 倍閱讀時間 ÷ 每段約 40 分 ≈ 9 段），不是官方的 12 章。上完第 1 段，卻從整個 D1、D2 抽題，一定會考到後面還沒上的內容。\n- 修正：讀書計畫改成照官方真實章節排，每章後面只出「這一章對到的考點」的題。改好之前：課後題遇到沒學過的就當預習，答錯不用在意。"},
-    {"q":"官方網站只有 5 大門課，為什麼計畫寫 D1～D7？第 1 門有 12 章，為什麼寫 9 段？","a":"**答：是兩套不同的分類。D1～D7 是考試指南的分法（考試配分照這 7 個），5 門是備考課程的分法。**\n• 1 Claude Platform & Solution Design → D1 解決方案設計（17%）＋ D2 模型／提示／上下文（13%）\n• 2 Enterprise Integration & Production → D3 整合（19%）＋ D4 評估測試優化（16%）\n• 3 Responsible AI, Safety & Risk → D5 治理安全風險（14%）\n• 4 Stakeholder Engagement, Lifecycle & GTM → D6 利害關係人與生命週期（14%）\n• 5 Team Enablement & Operational Productivity → D7 開發者生產力與維運（7%）"}
-  ]
-};
+let DATA_F = null;
+let DATA_P = null;
+
+async function sb(path) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, { headers: { apikey: SUPABASE_KEY } });
+  if (!res.ok) throw new Error(`${path}：${res.status} ${await res.text()}`);
+  return res.json();
+}
+
+async function loadData() {
+  const [tracks, courses, chapters, qa] = await Promise.all([
+    sb("tracks?select=*"),
+    sb("courses?select=*&order=n"),
+    sb("chapters?select=*&order=sort_order"),
+    sb("plan_qa?select=*&order=sort_order")
+  ]);
+  const build = code => {
+    const t = tracks.find(x => x.code === code) || {};
+    return {
+      baseDir: t.base_dir || "",
+      courses: courses.filter(c => c.track_code === code).map(c => ({
+        n: c.n, name_zh: c.name_zh, name_en: c.name_en, tag_zh: c.tag_zh,
+        official: c.official, min: c.total_min, file: c.file,
+        chapters: chapters.filter(ch => ch.course_id === c.id).map(ch => ({
+          id: ch.chapter_key, title_zh: ch.title_zh, title_en: ch.title_en,
+          n: ch.unit_count, nNew: ch.new_unit_count, screens: ch.screens, min: ch.min
+        }))
+      })),
+      planQa: qa.filter(q => q.track_code === code).map(q => ({ q: q.question, a: q.answer }))
+    };
+  };
+  DATA_F = build("f");
+  DATA_P = build("p");
+}
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const plain = s => String(s ?? "").replace(/\{\{([^{}|]+)(?:\|[^{}]+)?\}\}/g, "$1");
@@ -269,9 +277,16 @@ function switchTab(tab) {
   history.replaceState(null, "", isF ? "#f" : "#p");
 }
 
-renderF();
-renderP();
 if (location.hash.toLowerCase() === "#p") switchTab("p");
+document.getElementById("list-f").innerHTML = document.getElementById("list-p").innerHTML = '<p class="src">載入中…</p>';
+loadData().then(() => {
+  renderF();
+  renderP();
+}).catch(err => {
+  console.error(err);
+  document.getElementById("list-f").innerHTML = document.getElementById("list-p").innerHTML =
+    `<p class="src">課程資料載入失敗：${esc(err.message)}</p>`;
+});
 </script>
 </body>
 </html>
